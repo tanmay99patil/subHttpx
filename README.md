@@ -6,10 +6,10 @@ A simple Bash script that leverages **subfinder** and **httpx** to find subdomai
 
 ## Features
 
-- Finds subdomains of a given domain using `subfinder`.
+- Runs subfinder to discover subdomains and saves it to 'subs.domain.com.subfinder.txt'.
 - Checks live hosts among the subdomains using `httpx`.
 - Runs detailed `httpx` scans on live subdomains or on all subdomains (based on a flag).
-- This are the flags used as it gives almost all necessary details `-sc -cl -ct -title -ip -td` 
+- Runs httpx with additional options (-sc -cl -ct -title -ip -td) for live subdomains. This gives all necessary information
 - Saves all outputs in a dedicated folder named after the domain.
 - Outputs are separated for clarity: subs, live subs, detailed httpx scans, etc.
 
@@ -37,9 +37,9 @@ Make sure both tools are installed and accessible in your `PATH`.
 ## Output
 Outputs are saved inside a folder named after the domain:
 
-subs.txt — all discovered subdomains
+'subs.domain.com.subfinder.txt' — all discovered subdomains
 
-live_subs.txt — live subdomains detected by httpx
+'live.subs.domain.com.httpx.txt' — live subdomains detected by httpx
 
-httpx_all.txt — detailed httpx output (all subdomains if -allhttpx flag is used)
+'screenshots.live.subs.domain.com.httpx.txt' — detailed httpx output (all subdomains if -allhttpx flag is used)
 
