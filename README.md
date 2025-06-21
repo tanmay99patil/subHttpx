@@ -43,5 +43,3 @@ live_subs.txt — live subdomains detected by httpx
 
 httpx_all.txt — detailed httpx output (all subdomains if -allhttpx flag is used)
 
-You can add additional files as the script evolves.
-
